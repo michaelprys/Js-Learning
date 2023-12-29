@@ -1,21 +1,18 @@
 'use strict';
 
-let incr = 10,
-    decr = 10;
+const numberOfFilms = +prompt('How many films did you watch already');
 
-// ++incr;
-// --decr;
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+};
 
-console.log(++incr);
-console.log(--decr);
+const q1 = prompt('Your last movie?');
+const q2 = prompt('How do you star it?');
 
-console.log(5 % 2);
+personalMovieDB.movies[q1] = q2;
 
-console.log(2 * 4 === '8');
-console.log(2 + 2 * 2 === 8); // будет false, т.к. у умножения приоритет выше чем у сложения.
-
-const isChecked = false,
-    isClosed = false;
-
-console.log(isChecked && isClosed);
-console.log(isChecked || !isClosed);
+console.log(personalMovieDB);
